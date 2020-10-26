@@ -25,21 +25,7 @@ def literal_aoh
 end
 
 def aoh_lookup(aoh, row, key)
-  counter = 0
-  while counter < aoh.length do
-    inner_counter = 0
-    while inner_counter < aoh[counter].length do
-      if aoh[counter][inner_counter] == aoh[row][key]
-        requested_value = aoh[row][key]
-      end
-      inner_counter = inner_counter + 1
-    end
-
-  end
-  # if aoh[row][key] == requested value
-  # return requested value
-  return requested_value
-  counter = counter + 1
+  return aoh[row][key]
 end
 
 def aoh_update(aoh, row, key, new_value)
